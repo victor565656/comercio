@@ -1,0 +1,48 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+    <h2>Product {{ producto.id }}</h2>
+    <ul>
+        <li>Title: {{ producto.title }}</li>
+        <li>Description: {{ producto.description }}</li>
+        <li>Author: {{ producto.author }}</li>
+        <li>Starting bid: {{ producto.price }}</li>
+    </ul>
+
+    {% if user.is_authenticated  and  producto.author.id != usuario.id %}
+        <h2>Ofertar por el producto</h2>
+        <p>Starting price: {{precio}}</p>
+
+        {% if mayor_precio is not 0 %}
+            <p>Highest bid: {{ mayor_precio }} by {{mayor_ofertador}}</p>
+        {% else %}
+            <p>{{mayor_ofertador}}</p>
+        {% endif %}
+
+        {% if mensaje1 %}
+            <div>{{ mensaje1 }}</div>
+        {% endif %}
+
+        <form action="{% url 'ver' producto.id %}" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input class="btn btn-primary" type="submit" value="Publish">    
+        </form>
+    {% endif %}
+
+    <h2>Bids</h2>
+    <ul>
+        {% for oferta in ofertas %}
+         {% if producto.id == oferta.wanted_product.id %}
+            <li>
+                    {{oferta}}
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+     
+    <br>
+    <a href="{% url 'index' %}">Home</a> 
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Active Listings</h2>   
+  
+    <ul>
+        {% for producto in productos %}
+            <li><a href="{% url 'ver' producto.id %}">Producto {{ producto.id }}</a>: {{ producto.title }} /starting bid: {{ producto.price }} / Autor: {{ producto.author }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
