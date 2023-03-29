@@ -24,6 +24,7 @@ git push origin master // upload files
 ---- Guardar repositorio modificado ----
 git add .
 git commit -m "version2"
+-  git commit -am "some message"  - // si solo se modificaron archivos los2 pasos anteriores se resumen en este
 git push origin master
 
 ----crear nueva rama---
