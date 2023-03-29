@@ -31,7 +31,6 @@ git branch // ver rama actual
 git checkout -b <new branch name> // To make a new branch
 git checkout <branch name>  // cambiarse a otra rama
 
-
 """
 
 class User(AbstractUser):
