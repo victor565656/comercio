@@ -33,7 +33,7 @@ git checkout -b <new branch name> // To make a new branch
 git checkout <branch name>  // cambiarse a otra rama
 
 """
-# PRUEBA RAMA MASTER VERSION 5
+
 
  
 class User(AbstractUser):
