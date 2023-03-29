@@ -12,6 +12,17 @@ from django.db import models
 # from auctions.models import *
 # Bids.objects.filter(wanted_product=5).order_by('-bid')[0].buyer.id
 
+"""
+---- Comandos para subir repositorio a github ---
+git init
+git remote add origin -link- // crea un repositorio nuevo en github y copia el link ahi
+git status // see the status of your local files
+git add * // add files
+git commit -m "message" // Git map the changes
+git push origin master // upload files
+
+"""
+
 class User(AbstractUser):
     pass
     
