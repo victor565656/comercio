@@ -13,13 +13,24 @@ from django.db import models
 # Bids.objects.filter(wanted_product=5).order_by('-bid')[0].buyer.id
 
 """
----- Comandos para subir repositorio a github ---
+---- Comandos para subir repositorio nuevo a github ---
 git init
 git remote add origin -link- // crea un repositorio nuevo en github y copia el link ahi
 git status // see the status of your local files
 git add * // add files
 git commit -m "message" // Git map the changes
 git push origin master // upload files
+
+---- Guardar repositorio modificado ----
+git add .
+git commit -m "version2"
+git push origin master
+
+----crear nueva rama---
+git branch // ver rama actual
+git checkout -b <new branch name> // To make a new branch
+git checkout <branch name>  // cambiarse a otra rama
+
 
 """
 
