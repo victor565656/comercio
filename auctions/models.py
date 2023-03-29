@@ -34,7 +34,6 @@ git checkout <branch name>  // cambiarse a otra rama
 
 """
 
-
  
 class User(AbstractUser):
     pass
